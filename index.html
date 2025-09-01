@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Data Table</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>Student Data</h1>
+
+    <div class="card">
+      <div class="toolbar" role="region" aria-label="Table tools">
+        <div class="search">
+          <label for="search" class="sr-only">Search students</label>
+          <input id="search" type="search" placeholder="Search by name, roll no, email…" oninput="filterRows(this.value)" />
+        </div>
+        <div class="actions">
+          <button class="btn" onclick="sortBy(0)">Sort by Roll No</button>
+          <button class="btn" onclick="sortBy(1)">Sort by Name</button>
+          <button class="btn" onclick="sortBy(6)">Sort by Marks</button>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table id="students" aria-describedby="tableDesc">
+          <caption id="tableDesc">A responsive, accessible table showing sample student details.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Roll No</th>
+              <th scope="col">Name</th>
+              <th scope="col">Class</th>
+              <th scope="col">Section</th>
+              <th scope="col">Email</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Marks</th>
+              <th scope="col">Grade</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>101</td><td>name1</td><td>BTECH</td><td>A</td><td>name1@gmail.com</td><td>99999999999</td><td>92</td><td>A+</td><td><span class="badge">Pass</span></td>
+            </tr>
+            <tr>
+              <td>102</td><td>name2</td><td>BTECH</td><td>A</td><td>name2@gmail.com</td><td>888888888</td><td>84</td><td>A</td><td><span class="badge">Pass</span></td>
+            </tr>
+            <tr>
+              <td>103</td><td>name3</td><td>BTECH</td><td>B</td><td>name3@gmail.com</td><td>9898989898</td><td>76</td><td>B+</td><td><span class="badge">Pass</span></td>
+            </tr>
+            <tr>
+              <td>104</td><td>name4</td><td>BTECH</td><td>B</td><td>name4@gmail.com</td><td>777777777</td><td>58</td><td>C</td><td><span class="badge">Pass</span></td>
+            </tr>
+            <tr>
+              <td>105</td><td>name5</td><td>BTECH</td><td>C</td><td>name5@gmail.com</td><td>9800001122</td><td>44</td><td>D</td><td><span class="badge">ATKT</span></td>
+            </tr>
+            <tr>
+              <td>106</td><td>name6</td><td>BTECH</td><td>C</td><td>name6@gmail.com</td><td>9797979797</td><td>88</td><td>A</td><td><span class="badge">Pass</span></td>
+            </tr>
+            <tr>
+              <td>107</td><td>name7</td><td>BTECH</td><td>A</td><td>name7@gmail.com</td><td>997979797</td><td>67</td><td>B</td><td><span class="badge">Pass</span></td>
+            </tr>
+            <tr>
+              <td>108</td><td>name8</td><td>BTECH</td><td>A</td><td>name8@gmail.com</td><td>68868688866</td><td>95</td><td>A+</td><td><span class="badge">Pass</span></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="9">Total Students: <span id="count">8</span></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
